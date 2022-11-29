@@ -9,6 +9,7 @@ pipeline {
             git 'https://github.com/ravdy/nodejs-demo.git'
             }
         }
+    }
       stage('Docker build and push') {
       steps {
         sh '''
@@ -22,6 +23,9 @@ pipeline {
          docker build -t 381783421401.dkr.ecr.us-east-1.amazonaws.com/sample:SAMPLE-PROJECT-${BUILD_NUMBER} .
          docker push 381783421401.dkr.ecr.us-east-1.amazonaws.com/sample:SAMPLE-PROJECT-${BUILD_NUMBER}
           
-     }   
-   
+        }   
+    }
+    
+  }
+    
 
