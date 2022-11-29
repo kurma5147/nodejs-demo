@@ -9,7 +9,7 @@ pipeline {
             git 'https://github.com/ravdy/nodejs-demo.git'
             }
         }
-    }
+   
       stage('Docker build and push') {
       steps {
         sh '''
